@@ -1,0 +1,62 @@
+/* PHONE */
+html{
+    width: 100%;
+    min-height: 100%;
+    display:flex;
+    justify-content:stretch;}
+body{
+    width: 100%;
+    margin:0;
+    background-color: #d70000;
+    display:flex;
+    flex-direction:column;}
+    /* header */
+#header{
+    display:inline-flex;
+    margin:15px;}
+#bigcircle{
+    background:#2e69b6;
+    border-radius:50%;
+    width:160px;
+    height:160px;
+    border:30px solid #dbdbdb;
+    margin-right:20px;}
+.dots{
+    margin:20px;
+    border-radius:50%;
+    width:80px;
+    height:80px;}
+#red{
+    background:#890a0a;}
+#grey{
+    background:#ced1d6;}
+#green{
+    background:#05af3f;}
+    /* main */
+#main{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    }
+#screen{
+    background:#4a4949;
+    width:80%;
+    height:650px;
+    border:30px solid #cfcfcf;
+    margin-bottom:40px;}  
+#bluesquare{
+    background:#2e69b6;
+    width:77%;
+    height:200px;
+    margin-bottom:40px;}
+#bottom{
+    display:inline-flex;
+    justify-content:space-between;
+    width:100%;}
+#bottom img{
+    height:40%;
+    margin:auto;}
+#greysquare{
+    background:#4a4949;
+    width:50%;
+    height:450px;}
