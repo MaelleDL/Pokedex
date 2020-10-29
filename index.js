@@ -1,12 +1,12 @@
 const apiData = {
     url: 'https://pokeapi.co/api/v2/',
     type: 'pokemon',
-    id: 24,
+    id: 25,
 }
-
 const {url, type, id} = apiData
-
 const apiUrl = `${url}${type}/${id}`
+const leftButton = document.querySelector('#previous');
+const rightButton = document.querySelector('#next');
 
 fetch(apiUrl)
     .then( (data) => {
@@ -24,7 +24,8 @@ const generateHtml = (data) => {
     const name=`<div id="name">${data.name}</div>`
     const details=`<div id="details">
     <span>Height: ${data.height}</span>
-    <span>Weight: ${data.weight}</span></div>` 
+    <span>Weight: ${data.weight}</span>
+    </div>` 
 
     const screenDiv = document.querySelector('#screen')
     screenDiv.innerHTML = img
@@ -34,6 +35,14 @@ const generateHtml = (data) => {
 
     const detailsDiv = document.querySelector('#greysquare')
     detailsDiv.innerHTML = details}
-    
-// const #next.onclick = function(){apiData.id+=1};
-// const #previous.onclick = function(){apiData.id-=1};  
+
+const previousButtonClick = () =>{
+    if(prevUrl){fetch(prevUrl);}};
+
+const nextButtonClick = () =>{
+    if(nextUrl){fetch(nextUrl);}};
+
+leftButton.addEventListener('click', previousButtonClick);
+rightButton.addEventListener('click', nextButtonClick);
+
+

@@ -70,3 +70,9 @@ body{
     color:whitesmoke;
     text-align:center;
     font-size: 40px;}
+
+/* DESKTOP */
+@media only screen and (min-width: 992px){
+    body{
+        display: inline-flex;}
+    }
