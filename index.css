@@ -50,16 +50,15 @@ body{
     height:650px;
     border:30px solid #cfcfcf;
     margin:auto;}
+#screen img{
+    width: 100%;
+    margin:auto;}
 #main{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
     margin-top: 40px;
     }
-
-#screen img{
-    width: 100%;
-    margin:auto;}
 #bluesquare{
     background:#2e69b6;
     width:77%;
@@ -87,5 +86,15 @@ body{
 /* DESKTOP */
 @media only screen and (min-width: 992px){
     body{
-        display: inline-flex;}
+        flex-direction: row;
+
+        }
+    #left {
+
+        width :50%;
+    }
+     #main {
+
+        width :50%;
+    }
     }
