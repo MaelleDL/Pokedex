@@ -1,8 +1,8 @@
 const apiData = {
     url: 'https://pokeapi.co/api/v2/',
     type: 'pokemon',
-    id: 25,
-}
+    id: 24,}
+
 const {url, type, id} = apiData
 const apiUrl = `${url}${type}/${id}`
 const leftButton = document.querySelector('#previous');
@@ -37,12 +37,32 @@ const generateHtml = (data) => {
     detailsDiv.innerHTML = details}
 
 const previousButtonClick = () =>{
-    if(prevUrl){fetch(prevUrl);}};
+    apiData.id-=1;
+    fetch(apiUrl)
+    .then( (data) => {
+        if(data.ok){
+            return data.json()
+        }
+        throw new Error('Response not ok.'); 
+    })
+    .then( pokemon => generateHtml(pokemon))
+    .catch( error => console.error('Error:', error))
+    };
 
 const nextButtonClick = () =>{
-    if(nextUrl){fetch(nextUrl);}};
+    apiData.id+=1;
+    fetch(apiUrl)
+    .then( (data) => {
+        if(data.ok){
+            return data.json()
+        }
+        throw new Error('Response not ok.'); 
+    })
+    .then( pokemon => generateHtml(pokemon))
+    .catch( error => console.error('Error:', error))
+    };
 
-leftButton.addEventListener('click', previousButtonClick);
-rightButton.addEventListener('click', nextButtonClick);
+leftButton.click(previousButtonClick);
+rightButton.click(nextButtonClick);
 
 

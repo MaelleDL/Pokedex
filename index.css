@@ -14,8 +14,7 @@ body{
     /* header */
 #header{
     display:inline-flex;
-    margin:15px 15px 35px 15px;
-    }
+    margin:15px 15px 35px 15px;}
 #bigcircle{
     background:#2e69b6;
     border-radius:50%;
@@ -24,8 +23,7 @@ body{
     border:30px solid #dbdbdb;
     margin-right:20px;}
 #points{
-    display:inline-flex;
-}
+    display:inline-flex;}
 .dots{
     margin:20px;
     border-radius:50%;
@@ -41,8 +39,7 @@ body{
     font-family: 'Roboto', sans-serif;
     font-size :80px;
     color:#F0F325;
-    margin:0;
- }   
+    margin:0;}   
     /* main */
 #screen{
     background:#4a4949;
@@ -57,8 +54,7 @@ body{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-    margin-top: 40px;
-    }
+    margin-top: 40px;}
 #bluesquare{
     background:#2e69b6;
     width:77%;
@@ -86,15 +82,24 @@ body{
 /* DESKTOP */
 @media only screen and (min-width: 992px){
     body{
-        flex-direction: row;
-
-        }
-    #left {
-
-        width :50%;
-    }
-     #main {
-
-        width :50%;
-    }
-    }
+        flex-direction: row;}
+    #left{
+        width :50%;}
+     #main{
+        width :50%;}
+    #bigcircle{
+        width:100px;
+        height:100px;
+        border:20px solid #dbdbdb;
+        margin-right:20px;}
+    .dots{
+        margin:20px;
+        width:60px;
+        height:60px;}
+    #header h1{
+        font-size: 50px;}
+    #screen{
+        width:80%;
+        height:450px;
+        border:30px solid #cfcfcf;}
+}
