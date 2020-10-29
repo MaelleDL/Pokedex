@@ -85,21 +85,35 @@ body{
         flex-direction: row;}
     #left{
         width :50%;}
-     #main{
-        width :50%;}
+    #header {
+        margin-bottom: 20px;}
     #bigcircle{
-        width:100px;
-        height:100px;
-        border:20px solid #dbdbdb;
+        width:70px;
+        height:70px;
+        border:10px solid #dbdbdb;
         margin-right:20px;}
+    #contenu{
+        display:inline-flex;}            }
     .dots{
-        margin:20px;
-        width:60px;
-        height:60px;}
+        margin:10px;
+        width:40px;
+        height:40px;}
     #header h1{
         font-size: 50px;}
     #screen{
         width:80%;
         height:450px;
-        border:30px solid #cfcfcf;}
+        border:15px solid #cfcfcf;}
+    #main{
+        width :50%;}
+    #bluesquare{
+        height: 100px;}
+    .arrow{
+        display:flex;
+        align-content:flex-end;
+    }
+    #greysquare{
+        width:70%;
+        height:300px;
+    }
 }
