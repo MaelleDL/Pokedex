@@ -1,4 +1,4 @@
-let pokeId=150;
+let pokeId=1;
 
 function getAPI(id){
     let apiUrl = `https://pokeapi.co/api/v2/pokemon/${id}`
