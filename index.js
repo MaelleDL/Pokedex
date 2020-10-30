@@ -1,68 +1,51 @@
-const apiData = {
-    url: 'https://pokeapi.co/api/v2/',
-    type: 'pokemon',
-    id: 24,}
+let pokeId=1;
 
-const {url, type, id} = apiData
-const apiUrl = `${url}${type}/${id}`
-const leftButton = document.querySelector('#previous');
-const rightButton = document.querySelector('#next');
 
-fetch(apiUrl)
-    .then( (data) => {
-        if(data.ok){
-            return data.json()
-        }
-        throw new Error('Response not ok.'); 
-    })
-    .then( pokemon => generateHtml(pokemon))
-    .catch( error => console.error('Error:', error))
+function getAPI(id){
+    let apiUrl = `https://pokeapi.co/api/v2/pokemon/${id}`
+    fetch(apiUrl)
+        .then( (data) => data.json())
+        .then ( (pokemon) => generateHtml(pokemon))};
 
+getAPI(pokeId);
 
 const generateHtml = (data) => {
-    const img=`<img src=${data.sprites.front_default}>`
-    const name=`<div id="name">${data.name}</div>`
+    const pokeID = `<div id="pokeID">${data.id.toString()}<div>`;
+    const img=`<img src=${data.sprites.front_default}>`;
+    const name=`<div id="name">${data.name}</div>`;
+    const pokeType=`<div class="types">${data.types[0].type.name} 
+    <div class="types">${data.types[1].type.name}`;
     const details=`<div id="details">
     <span>Height: ${data.height}</span>
     <span>Weight: ${data.weight}</span>
-    </div>` 
-
+    </div>
+    <div id="pokeabilities">
+    <span> ${data.abilities[0].ability.name}</span>
+    <span> ${data.abilities[1].ability.name}</span>
+    </div>`;
+    
+    const IdDiv = document.querySelector('#bigcircle')
+    IdDiv.innerHTML = pokeID
     const screenDiv = document.querySelector('#screen')
     screenDiv.innerHTML = img
-
-    const NameDiv = document.querySelector('#bluesquare')
+    const NameDiv = document.querySelector('#NamePlace')
     NameDiv.innerHTML = name
-
+    const typeDiv = document.querySelector('#TypePlace')
+    typeDiv.innerHTML = pokeType
     const detailsDiv = document.querySelector('#greysquare')
-    detailsDiv.innerHTML = details}
+    detailsDiv.innerHTML = details
+    
+}
 
-const previousButtonClick = () =>{
-    apiData.id-=1;
-    fetch(apiUrl)
-    .then( (data) => {
-        if(data.ok){
-            return data.json()
-        }
-        throw new Error('Response not ok.'); 
-    })
-    .then( pokemon => generateHtml(pokemon))
-    .catch( error => console.error('Error:', error))
-    };
+function previousButtonClick(){
+    pokeId--;
+    getAPI(pokeId);};
 
-const nextButtonClick = () =>{
-    apiData.id+=1;
-    fetch(apiUrl)
-    .then( (data) => {
-        if(data.ok){
-            return data.json()
-        }
-        throw new Error('Response not ok.'); 
-    })
-    .then( pokemon => generateHtml(pokemon))
-    .catch( error => console.error('Error:', error))
-    };
+function nextButtonClick(){
+    pokeId++;
+    getAPI(pokeId);};
 
-leftButton.click(previousButtonClick);
-rightButton.click(nextButtonClick);
-
-
+const leftButton=document.querySelector('#previous');
+const rightButton=document.querySelector('#next');
+('#previous').addEventListener('click',previousButtonClick);
+('#next').addEventListener('click',nextButtonClick);
