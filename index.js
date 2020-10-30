@@ -13,8 +13,13 @@ const generateHtml = (data) => {
     const pokeID = `<div id="pokeID">${data.id.toString()}<div>`;
     const img=`<img src=${data.sprites.front_default}>`;
     const name=`<div id="name">${data.name}</div>`;
-    const pokeType=`<div class="types">${data.types[0].type.name} 
-    <div class="types">${data.types[1].type.name}`;
+    const pokeType1=`<div class="types">${data.types[0].type.name}</div>`;
+    const secondType=data.types[1];
+    if (secondType) {
+        pokeType2=`<div class="types">${data.types[1].type.name}</div>`;
+      } else {
+        pokeType2= '';
+      }
     const details=`<div id="details">
     <span>Height: ${data.height}</span>
     <span>Weight: ${data.weight}</span>
@@ -30,22 +35,27 @@ const generateHtml = (data) => {
     screenDiv.innerHTML = img
     const NameDiv = document.querySelector('#NamePlace')
     NameDiv.innerHTML = name
-    const typeDiv = document.querySelector('#TypePlace')
-    typeDiv.innerHTML = pokeType
+    const type1Div = document.querySelector('#Type1Place')
+    type1Div.innerHTML = pokeType1
+    const type2Div = document.querySelector('#Type2Place')
+    type2Div.innerHTML = pokeType2
     const detailsDiv = document.querySelector('#greysquare')
-    detailsDiv.innerHTML = details
-    
-}
+    detailsDiv.innerHTML = details}
 
-function previousButtonClick(){
+function leftButtonClick(){
     pokeId--;
-    getAPI(pokeId);};
+    if (pokeId<0){
+    getAPI(pokeId);
+    }else{}};
 
-function nextButtonClick(){
+function rightButtonClick(){
     pokeId++;
-    getAPI(pokeId);};
+    getAPI(pokeId);
+    if (pokeId<1050){
+        getAPI(pokeId);
+        }else{}};
 
 const leftButton=document.querySelector('#previous');
 const rightButton=document.querySelector('#next');
-('#previous').addEventListener('click',previousButtonClick);
-('#next').addEventListener('click',nextButtonClick);
+leftButton.addEventListener('click', leftButtonClick());
+rightButton.addEventListener('click', rightButtonClick());
