@@ -45,17 +45,11 @@ const generateHtml = (data) => {
 function leftButtonClick(){
     pokeId--;
     if (pokeId<0){
-    getAPI(pokeId);
+        getAPI(pokeId);
     }else{}};
 
 function rightButtonClick(){
     pokeId++;
-    getAPI(pokeId);
     if (pokeId<1050){
         getAPI(pokeId);
-        }else{}};
-
-const leftButton=document.querySelector('#previous');
-const rightButton=document.querySelector('#next');
-leftButton.addEventListener('click', leftButtonClick());
-rightButton.addEventListener('click', rightButtonClick());
+    }else{}};
