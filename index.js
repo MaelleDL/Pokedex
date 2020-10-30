@@ -1,4 +1,4 @@
-let pokeId=1;
+let pokeId=151;
 
 
 function getAPI(id){
@@ -20,13 +20,19 @@ const generateHtml = (data) => {
       } else {
         pokeType2= '';
       }
+      const secondAbility=data.abilities[1];
+    if (secondAbility) {
+        pokeAb2=`${data.abilities[1].ability.name}`;
+      } else {
+        pokeAb2= '';
+      }
     const details=`<div id="details">
     <span>Height: ${data.height}</span>
     <span>Weight: ${data.weight}</span>
     </div>
     <div id="pokeabilities">
     <span> ${data.abilities[0].ability.name}</span>
-    <span> ${data.abilities[1].ability.name}</span>
+    <span> ${pokeAb2}</span>
     </div>`;
     
     const IdDiv = document.querySelector('#bigcircle')
@@ -44,12 +50,16 @@ const generateHtml = (data) => {
 
 function leftButtonClick(){
     pokeId--;
-    if (pokeId<0){
+    if (pokeId>=0){
         getAPI(pokeId);
-    }else{}};
+    }else{
+        pokeId=151;
+        getAPI(pokeId);}};
 
 function rightButtonClick(){
     pokeId++;
-    if (pokeId<1050){
+    if (pokeId<152){
         getAPI(pokeId);
-    }else{}};
+    }else{
+        pokeId=1;
+        getAPI(pokeId);}};
