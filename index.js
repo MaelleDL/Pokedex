@@ -1,4 +1,4 @@
-let pokeId=1;
+let pokeId=150;
 
 
 function getAPI(id){
@@ -25,6 +25,7 @@ const generateHtml = (data) => {
     <span>Weight: ${data.weight}</span>
     </div>
     <div id="pokeabilities">
+    <h2>ABILITIES</h2>
     <span> ${data.abilities[0].ability.name}</span>
     <span> ${data.abilities[1].ability.name}</span>
     </div>`;

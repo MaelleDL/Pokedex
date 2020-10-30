@@ -16,12 +16,21 @@ body{
     display:inline-flex;
     margin:15px 15px 35px 15px;}
 #bigcircle{
+    display :flex;
+    justify-content:center;
+    align-content: center;
     background:#2e69b6;
     border-radius:50%;
     width:160px;
     height:160px;
     border:30px solid #dbdbdb;
     margin-right:20px;}
+#pokeID{
+    font-family :'Roboto',sans-serif;
+    font-size :70px;
+    color :whitesmoke;
+    margin :auto;
+}
 #points{
     display:inline-flex;}
 .dots{
@@ -56,21 +65,28 @@ body{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-    margin-top: 40px;
-    margin-left :250px;}
+    margin-top: 40px;}
 #bluesquare{
     background:#2e69b6;
-    width:90%;
+    width:77%;
     height:200px;
     margin-bottom:40px;}
 #bluesquare #NamePlace{
     font-family: Helvetica;
     font-size: 40px;
+    color:whitesmoke;
     text-align:center;
     text-transform:uppercase;}
-#bluesquare #TypePlace{
+#bluesquare #Type1Place{
     font-family: Helvetica;
-    font-size: 25px;
+    font-size: 20px;
+    color:whitesmoke;
+    text-align:center;
+    text-transform:lowercase;}
+#bluesquare #Type2Place{
+    font-family: Helvetica;
+    font-size: 20px;
+    color:whitesmoke;
     text-align:center;
     text-transform:lowercase;}
 #bottom{
@@ -79,20 +95,24 @@ body{
     width:200%;}
 #greysquare{
     background:#4a4949;
-    width:200%;
+    width:50%;
     height:400%;
     }
 #details{
-    font-family: Helvetica;
+    display:flex;
+    flex-direction:column;
+    font-family: 'Roboto';
     color:whitesmoke;
     text-align:center;
-    font-size :40px;
+    font-size :25px;
     }
 #greysquare #pokeabilities{
-    font-family: Helvetica;
-    color:black;
+    display:flex;
+    flex-direction:column;
+    font-family: 'Roboto';
+    color:whitesmoke;
     text-align:center;
-    font-size: 40px; 
+    font-size: 30px; 
     }
 
 /* DESKTOP */
@@ -123,7 +143,9 @@ body{
     #main{
         width :50%;}
     #bluesquare{
-        height: 100px;}
+        height: 100px;
+        }
+    
     #greysquare{
         width:70%;
         height:300px;
@@ -132,5 +154,5 @@ body{
     font-family: Helvetica;
     color:whitesmoke;
     text-align:center;
-    font-size: 70px;}
+    font-size: 40px;}
 }
