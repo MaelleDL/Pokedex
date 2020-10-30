@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 let pokeId=150;
-=======
-let pokeId=151;
->>>>>>> fdde5d7c16e93ab31b5c2b99fdc1ffc7db694728
-
 
 function getAPI(id){
     let apiUrl = `https://pokeapi.co/api/v2/pokemon/${id}`
