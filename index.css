@@ -48,36 +48,52 @@ body{
     border:30px solid #cfcfcf;
     margin:auto;}
 #screen img{
-    width: 100%;
-    margin:auto;}
+    width: 31em;
+    display: block;
+    margin : auto;
+    }
 #main{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-    margin-top: 40px;}
+    margin-top: 40px;
+    margin-left :250px;}
 #bluesquare{
     background:#2e69b6;
-    width:77%;
+    width:90%;
     height:200px;
     margin-bottom:40px;}
-#bluesquare #name{
+#bluesquare #NamePlace{
     font-family: Helvetica;
-    font-size: 50px;
+    font-size: 40px;
     text-align:center;
     text-transform:uppercase;}
+#bluesquare #TypePlace{
+    font-family: Helvetica;
+    font-size: 25px;
+    text-align:center;
+    text-transform:lowercase;}
 #bottom{
     display:inline-flex;
     justify-content:space-between;
-    width:100%;}
+    width:200%;}
 #greysquare{
     background:#4a4949;
-    width:50%;
-    height:450px;}
-#greysquare #details{
+    width:200%;
+    height:400%;
+    }
+#details{
     font-family: Helvetica;
     color:whitesmoke;
     text-align:center;
-    font-size: 40px;}
+    font-size :40px;
+    }
+#greysquare #pokeabilities{
+    font-family: Helvetica;
+    color:black;
+    text-align:center;
+    font-size: 40px; 
+    }
 
 /* DESKTOP */
 @media only screen and (min-width: 992px){
@@ -93,7 +109,7 @@ body{
         border:10px solid #dbdbdb;
         margin-right:20px;}
     #contenu{
-        display:inline-flex;}            }
+        display:inline-flex;}            
     .dots{
         margin:10px;
         width:40px;
@@ -108,12 +124,13 @@ body{
         width :50%;}
     #bluesquare{
         height: 100px;}
-    .arrow{
-        display:flex;
-        align-content:flex-end;
-    }
     #greysquare{
         width:70%;
         height:300px;
     }
+    #greysquare #details{
+    font-family: Helvetica;
+    color:whitesmoke;
+    text-align:center;
+    font-size: 70px;}
 }
