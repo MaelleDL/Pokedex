@@ -26,6 +26,7 @@ const generateHtml = (data) => {
         pokeAb2= '';
       }
     const details=`<div id="details">
+    <h2>CHARACTERISTICS</h2>
     <span>Height: ${data.height}</span>
     <span>Weight: ${data.weight}</span>
     </div>
