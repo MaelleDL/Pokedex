@@ -21,7 +21,7 @@ const generateHtml = (data) => {
       }
       const secondAbility=data.abilities[1];
     if (secondAbility) {
-        pokeAb2=`${data.abilities[1].ability.name}`;
+        pokeAb2=`, ${data.abilities[1].ability.name}`;
       } else {
         pokeAb2= '';
       }

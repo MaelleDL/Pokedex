@@ -8,7 +8,7 @@ html{
 body{
     width: 100%;
     margin:0;
-    background-color: #d70000;
+    background: linear-gradient(#d70000,#800707);
     display:flex;
     flex-direction:column;}
     /* header */
@@ -19,7 +19,7 @@ body{
     display :flex;
     justify-content:center;
     align-content: center;
-    background:#2e69b6;
+    background: linear-gradient(#275ca1,#2e69b6);
     border-radius:50%;
     width:160px;
     height:160px;
@@ -28,9 +28,8 @@ body{
 #pokeID{
     font-family :'Roboto',sans-serif;
     font-size :70px;
-    color :whitesmoke;
-    margin :auto;
-}
+    color :#dbdbdb;
+    margin :auto;}
 #points{
     display:inline-flex;}
 .dots{
@@ -39,11 +38,11 @@ body{
     width:80px;
     height:80px;}
 #red{
-    background:#890a0a;}
+    background: linear-gradient(#460606,#890a0a);}
 #grey{
-    background:#ced1d6;}
+    background: linear-gradient(#807d7d,#ced1d6);}
 #green{
-    background:#05af3f;}
+    background: linear-gradient(#05832f,#05af3f);}
 #header h1{
     font-family: 'Roboto', sans-serif;
     font-size :80px;
@@ -51,16 +50,15 @@ body{
     margin:0;}   
     /* main */
 #screen{
-    background:#4a4949;
+    background: linear-gradient(#4a4949,#2e2d2d);
     width:80%;
     height:650px;
     border:30px solid #cfcfcf;
     margin:auto;}
 #screen img{
-    width: 31em;
+    width: 45em;
     display: block;
-    margin : auto;
-    }
+    margin : auto;}
 #main{
     display:flex;
     flex-wrap:wrap;
@@ -69,14 +67,15 @@ body{
 #bluesquare{
     display: inline-flex;
     justify-content:space-around;
-    background:#2e69b6;
+    background: linear-gradient(#275ca1,#2e69b6);
     width:77%;
     height:200px;
     margin-bottom:40px;}
 #NamePlace{
-    font-family: Helvetica;
-    font-size: 40px;
-    color:whitesmoke;
+    font-family: 'Miriam Libre', sans-serif;
+    font-size: 60px;
+    font-weight:bold;
+    color:#dbdbdb;
     text-align:center;
     text-transform:uppercase;
     margin-top:auto;
@@ -84,49 +83,34 @@ body{
 #Types{
     margin-top:auto;
     margin-bottom: auto;
-}
-#Type1Place{
-    font-family: Helvetica;
-    font-size: 20px;
-    color:whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    color:#dbdbdb;
     text-align:center;}
-#Type2Place{
-    font-family: Helvetica;
-    font-size: 20px;
-    color:whitesmoke;
-    text-align:center;
-    text-transform:lowercase;}
+    /* bottom */
 #bottom{
     display:inline-flex;
-    justify-content:space-between;
+    justify-content:space-around;
     width:200%;}
 #greysquare{
-    background:#4a4949;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    background:linear-gradient(#4a4949,#2e2d2d);
     width:50%;
-    height:400%;
-    }
-#details{
+    height:400px;}
+#greysquare{
     display:flex;
     flex-direction:column;
-    font-family: 'Roboto';
-    color:whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    color:#dbdbdb;
     text-align:center;
-    font-size :25px;
-    }
-h2 {
-    font-size :24px
-} 
-span{
-    font-size:20px;
-}
-#greysquare #pokeabilities{
-    display:flex;
-    flex-direction:column;
-    font-family: 'Roboto';
-    color:whitesmoke;
-    text-align:center;
-    font-size: 30px; 
-    }
+    font-size :40px;}
+#greysquare h2 {
+    margin:5px;
+    font-size :45px}
+#bottom img:hover{
+    cursor:pointer;}
 
 /* DESKTOP */
 @media only screen and (min-width: 992px){
@@ -141,6 +125,8 @@ span{
         height:70px;
         border:10px solid #dbdbdb;
         margin-right:20px;}
+    #pokeID{
+        font-size :40px;}
     #contenu{
         display:inline-flex;}            
     .dots{
@@ -153,19 +139,20 @@ span{
         width:80%;
         height:450px;
         border:15px solid #cfcfcf;}
+    #screen img{
+        width: 30em;}
     #main{
         width :50%;}
     #bluesquare{
-        height: 100px;
-        }
-    
+        height: 100px;}
+    #NamePlace{
+        font-size: 50px;}
+    #Types{
+        font-size: 30px;} 
     #greysquare{
         width:70%;
-        height:300px;
-    }
-    #greysquare #details{
-    font-family: Helvetica;
-    color:whitesmoke;
-    text-align:center;
-    font-size: 40px;}
-}
+        height:300px;}
+    #greysquare{
+        font-size :30px;}
+    #greysquare h2 {
+        font-size :35px}}
