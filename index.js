@@ -27,8 +27,8 @@ const generateHtml = (data) => {
       }
     const details=`<div id="details">
     <h2>CHARACTERISTICS</h2>
-    <span>Height: ${data.height}</span>
-    <span>Weight: ${data.weight}</span>
+    <span>Height:${data.height}</span>
+    <span>Weight:${data.weight}</span>
     </div>
     <div id="pokeabilities">
     <h2>ABILITIES</h2>
