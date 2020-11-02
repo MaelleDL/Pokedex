@@ -24,7 +24,7 @@ body{
     border-radius:50%;
     width:160px;
     height:160px;
-    border:30px solid #dbdbdb;
+    border:20px solid #dbdbdb;
     margin-right:20px;}
 #pokeID{
     font-family: 'Press Start 2P', cursive;
@@ -39,11 +39,11 @@ body{
     width:80px;
     height:80px;}
 #red{
-    background: linear-gradient(#460606,#890a0a);}
+    background: linear-gradient(#610909,#890a0a);}
 #grey{
-    background: linear-gradient(#807d7d,#ced1d6);}
+    background: linear-gradient(#8d8989,#ced1d6);}
 #green{
-    background: linear-gradient(#05832f,#05af3f);}
+    background: linear-gradient(#059736,#05af3f);}
 #header h1{
     font-family: 'Roboto', sans-serif;
     font-size :80px;
@@ -54,7 +54,7 @@ body{
     background: linear-gradient(#4a4949,#2e2d2d);
     width:80%;
     height:650px;
-    border:30px solid #cfcfcf;
+    border:20px solid #cfcfcf;
     margin:auto;}
 #screen img{
     width: 45em;
@@ -69,6 +69,7 @@ body{
     display: inline-flex;
     justify-content:space-around;
     background: linear-gradient(#275ca1,#2e69b6);
+    border:5px solid #275ca1;
     width:77%;
     height:200px;
     margin-bottom:40px;
@@ -95,6 +96,7 @@ body{
     flex-direction:column;
     justify-content:space-around;
     background:linear-gradient(#4a4949,#2e2d2d);
+    border:5px solid #cfcfcf;
     width:50%;
     height:400px;}
 #greysquare{
