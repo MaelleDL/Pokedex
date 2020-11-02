@@ -51,7 +51,7 @@ const generateHtml = (data) => {
 
 function leftButtonClick(){
     pokeId--;
-    if (pokeId>=0){
+    if (pokeId>0){
         getAPI(pokeId);
     }else{
         pokeId=151;
