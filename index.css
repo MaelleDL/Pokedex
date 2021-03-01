@@ -45,8 +45,8 @@ h2 {
 }
 .id {
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 140px;
+  height: 140px;
 }
 .name {
   border-radius: 15px;
@@ -129,6 +129,10 @@ h2 {
   }
   #red {
     border-radius: 500px 500px 0% 0%;
+    align-items: center;
+  }
+  .line {
+    width: 80%;
   }
   .basic-info {
     font-size: 30px;
@@ -159,7 +163,7 @@ h2 {
   }
   .details {
     width: 260px;
-    margin-bottom: 5rem;
+    /* margin-bottom: 5rem; */
     font-size: 20px;
   }
 }
