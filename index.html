@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html>
-	<head>
-        <title>Pokédex</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="index.css">
-        <script type="text/javascript" src="index.js"></script>
-	</head>
-	<body>
-        <div id="left" >
-            <div id="header">
-                <div id="bigcircle"></div>
-                <div id="contenu">
-                <div id="points">
-                    <div class="dots" id="red"></div>
-                    <div class="dots" id="grey"></div>
-                    <div class="dots" id="green"></div>
-                </div>
-                <h1>POKEDEX</h1>
-                </div>
-                </div>
-            <div id="screen"></div>
+  <head>
+    <title>Pokédex</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script type="text/javascript" src="index.js"></script>
+  </head>
+  <body>
+    <div id="pokeball">
+      <div id="red">
+        <div class="line1 line">
+          <div class="id basic-info"></div>
+          <div class="name basic-info"></div>
         </div>
-        <div id="main">
-            <div id="bluesquare">
-                <div id='NamePlace'></div>
-                <div id='Types'>
-                    <div id='Type1Place'></div>
-                    <div id='Type2Place'></div>
-                </div>
-            </div>
-            <div id="bottom">
-                <div id="previous" onclick ="leftButtonClick()"><img src="left.png" alt="previous"></div>
-                <div id="greysquare"></div>
-                <div id="next"onclick ="rightButtonClick()"><img src="right.png" alt="next"></div>
-            </div>
-        </div>  
-	</body>	
+        <div class="line2 line">
+          <div class="type1 basic-info"></div>
+          <div class="type2 basic-info"></div>
+        </div>
+      </div>
+      <div id="bar">
+        <div id="previous" onclick="leftButtonClick()">
+          <img src="left.png" alt="previous" />
+        </div>
+        <div id="circle"></div>
+        <div id="next" onclick="rightButtonClick()">
+          <img src="right.png" alt="next" />
+        </div>
+      </div>
+      <div id="white">
+        <div class="caracteristic details"></div>
+        <div class="abilities details"></div>
+      </div>
+    </div>
+  </body>
 </html>
