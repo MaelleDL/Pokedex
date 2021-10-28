@@ -125,10 +125,10 @@ h2 {
   #pokeball {
     width: 80%;
     height: 90%;
-    border-radius: 500px;
+    border-radius: 800px;
+    overflow: hidden;
   }
   #red {
-    border-radius: 500px 500px 0% 0%;
     align-items: center;
   }
   .line {
@@ -157,9 +157,6 @@ h2 {
   #previous img,
   #next img {
     width: 50%;
-  }
-  #white {
-    border-radius: 0% 0% 500px 500px;
   }
   .details {
     width: 260px;
